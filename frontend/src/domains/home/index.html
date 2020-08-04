@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid-19 World Data</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js" defer></script>
+</head>
+<body>
+
+<div id="main-container">
+
+    <div id="display">
+        <div id="country">
+            <h3> Nome do país:</h3> <h3 id="exibirPais"></h3> 
+        </div>
+
+        <!-- <div id="countryCode">
+            <h3> codigo do pais</h3>
+        </div>
+
+        <div id="cases">
+            <h3>numero de casos</h3>
+        </div>
+
+        <div id="lastUpdate">
+            <h3>ultima atualização</h3>
+        </div> -->
+
+        <button id="button" onclick="showData()">Exibir dados</button>
+        
+        
+    </div>
+    
+</div>
+</body>
+</html>
