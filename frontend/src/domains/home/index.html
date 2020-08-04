@@ -3,37 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Covid-19 World Data</title>
+    <title>COVID-19 World Data</title>
     <link rel="stylesheet" href="index.css">
-    <script src="index.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div id="main-container">
+        <div id="header"> <h3> Dados Atuais COVID-19</h3>
 
-<div id="main-container">
+        </div>
+        <div id="data-select">
+            <select>
+                <option>option 1</option>
+                <option>option 2</option>
+                <option>option 3</option>
+                <option>option 4</option>
+            </select>
 
-    <div id="display">
-        <div id="country">
-            <h3> Nome do país:</h3> <h3 id="exibirPais"></h3> 
+            </select> 
+
+        </div>
+        <div class="data" id="data-show">
+            
+                
+
+                    <div id="infected" class="panels">
+                        <h3>Infectados</h3><br>
+                        <h4>#####</h4>
+                        
+                    </div>
+                    <div id="dead" class="panels">
+                        <h3>Mortos</h3><br>
+                        <h4>#####</h4>
+                        
+                    </div>
+                    <div id="cured" class="panels">
+                        <h3>Curados</h3><br>
+                        <h4>#####</h4>
+                        
+                    </div>
+                    
+                
+            
+
+
+
+
+
+
+
+            
+
+        </div>
+        <div id="footer"> footer aqui
+
         </div>
 
-        <!-- <div id="countryCode">
-            <h3> codigo do pais</h3>
-        </div>
 
-        <div id="cases">
-            <h3>numero de casos</h3>
-        </div>
 
-        <div id="lastUpdate">
-            <h3>ultima atualização</h3>
-        </div> -->
 
-        <button id="button" onclick="showData()">Exibir dados</button>
-        
-        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </div>
+
     
-</div>
 </body>
 </html>
