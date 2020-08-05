@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID-19 World Data</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js" defer></script>
+    
+    <script src="functions.js" defer></script>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="main-container">
+
+        <div id="header"> <h3> Dados Atuais COVID-19</h3>
+            
+        </div>
+        <div id="data-select" onchange="showData()">
+            Escolha o país <p id="slug"></p>
+            <select id="country-list">
+                
+            </select>
+            
+            <div id="data-confirm">
+
+                <h5>Nome do País: <span id="data-country"></span> </h5>
+                <h5>Código do País: <span id="data-code"></span> </h5>
+                <h5>Total de casos: <span id="data-cases"></span> </h5>
+                <h5>Última Atualização: <span id="data-last-update"></span> </h5>
+                
+            </div>
+            
+        </div> 
+        
+    </div>
+    <div class="data" id="data-show">
+        
+        
+        
+        <div id="infected-panel" class="panels">
+            <h3>Infectados</h3><br>
+            <h4 id="infected">#####</h4>
+            
+        </div>
+        <div id="dead-panel"  class="panels">
+            <h3>Mortos</h3><br>
+            <h4 id="dead">#####</h4>
+            
+        </div>
+        <div id="cured-panel" class="panels">
+                        <h3>Curados</h3><br>
+                        <h4 id="cured">#####</h4>
+                        
+                    </div>
+                    
+                
+                    
+                    
+                    
+
+                    
+                    
+                    
+                    
+                    
+                    
+                </div>
+                <div id="footer"> footer aqui
+                    
+                </div>
+
+                
+                
+                
+                
+                
+                
+
+                
+                
+                
+                
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+            </div>
+            </body>
+            </html>
