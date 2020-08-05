@@ -4,92 +4,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>COVID-19 World Data</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js" defer></script>
+    
+    <script src="functions.js" defer></script>
     <link rel="stylesheet" href="index.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    
-        <div id="header"> <h3> Dados Atuais COVID-19</h3>
+    <div id="main-container">
 
+        <div id="header"> <h3> Dados Atuais COVID-19</h3>
+            
         </div>
         <div id="data-select">
             Escolha a cidade: 
-            <select>
-                <option>option 1</option>
-                <option>option 2</option>
-                <option>option 3</option>
-                <option>option 4</option>
-            </select>
-
-            </select> 
-
-        </div>
-        <div class="data" id="data-show">
-            
+            <select id="country-list">
                 
+            </select>
+            <div id="data-confirm">
 
-                    <div id="infected" class="panels">
-                        <h3>Infectados</h3><br>
-                        <h4>#####</h4>
-                        
-                    </div>
-                    <div id="dead" class="panels">
-                        <h3>Mortos</h3><br>
-                        <h4>#####</h4>
-                        
-                    </div>
-                    <div id="cured" class="panels">
+                <h5>Nome do País: <span id="data-country"></span> </h5>
+                <h5>Código do País: <span id="data-country-code"></span> </h5>
+                <h5>Total de casos: <span id="data-cases"></span> </h5>
+                <h5>Última Atualização: <span id="data-last-update"></span> </h5>
+            </div>
+            
+        </div> 
+        
+    </div>
+    <div class="data" id="data-show">
+        
+        
+        
+        <div id="infected" class="panels">
+            <h3>Infectados</h3><br>
+            <h4>#####</h4>
+            
+        </div>
+        <div id="dead" class="panels">
+            <h3>Mortos</h3><br>
+            <h4>#####</h4>
+            
+        </div>
+        <div id="cured" class="panels">
                         <h3>Curados</h3><br>
                         <h4>#####</h4>
                         
                     </div>
                     
                 
-            
+                    
+                    
+                    
 
+                    
+                    
+                    
+                    
+                    
+                    
+                </div>
+                <div id="footer"> footer aqui
+                    
+                </div>
 
+                
+                
+                
+                
+                
+                
 
+                
+                
+                
+                
 
-
-
-
-            
-
-        </div>
-        <div id="footer"> footer aqui
-
-        </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-    
-</body>
-</html>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+            </div>
+            </body>
+            </html>
