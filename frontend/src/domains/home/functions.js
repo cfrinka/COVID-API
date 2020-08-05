@@ -17,7 +17,7 @@ async function getCountryList() {
         const data = result.data
         const x = document.getElementById('country-list')
         const countryListed = []
-        const countrySlug = []
+        //const countrySlug = []
         data.forEach(element => {
             countryListed.push(element.Slug)
         })

@@ -70,14 +70,14 @@ body {
        
 }
 
-#infected {
+#infected-panel {
     background-color: aqua;
 }
 
-#dead {
+#dead-panel {
     background-color: blueviolet;
 }
 
-#cured {
+#cured-panel {
     background-color: green;
 }
