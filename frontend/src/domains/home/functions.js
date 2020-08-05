@@ -1,3 +1,14 @@
+/* Para amanhã: Pela lista dropdown, selecionar qual pais exibir os dados
+Converter data da ultima atualização
+Terminar estilização
+ */
+
+
+
+
+
+
+
 
 
 async function getCountryList() {
@@ -8,42 +19,51 @@ async function getCountryList() {
         const countryListed = []
         data.forEach(element => {
             countryListed.push(element.Country)
-
         })
         const countryOrdered = countryListed.sort()
 
         countryOrdered.forEach(element => {
             const option = document.createElement('option')
             option.text = element
-            x.add(option)
-            
+            x.add(option)           
         });
         
     } catch (error) {
         console.log(error)
     }
-
-
 }
 getCountryList()
 
 
 async function showData() {
     try{ 
-    const res =  await axios.get('https://api.covid19api.com/country/brazil?from=2020-03-01T00:00:00Z&to=2020-04-01T00:00:00Z')
+    const res =  await axios.get('https://api.covid19api.com/country/brazil')
     
     
-        const [data] = res.data
-        const country = data.Country
+        const data = res.data
+        const latestData = data[data.length - 1]
+        
+
         const pais = document.getElementById('data-country')
-        pais.innerHTML = country
-        console.log(country)
-    
+        const code = document.getElementById('data-code')
+        const cases = document.getElementById('data-cases')
+        const lastUpdate = document.getElementById('data-last-update')
+        const infected = document.getElementById('infected')
+        const dead = document.getElementById('dead')
+        const cured = document.getElementById('cured')
+
+        pais.innerHTML = latestData.Country
+        code.innerHTML = latestData.CountryCode
+        cases.innerHTML = latestData.Confirmed
+        lastUpdate.innerHTML = latestData.Date
+        infected.innerHTML = latestData.Active
+        dead.innerHTML = latestData.Deaths
+        cured.innerHTML = latestData.Recovered
+        
     } catch (error)  {
         console.log('deu ruim', error) 
-    }
-    
-    
+    }   
 }
 
-showData()
+
+

@@ -17,16 +17,18 @@
             
         </div>
         <div id="data-select">
-            Escolha a cidade: 
+            Escolha o país 
             <select id="country-list">
                 
             </select>
+            <button onclick="showData()">Click</button>
             <div id="data-confirm">
 
                 <h5>Nome do País: <span id="data-country"></span> </h5>
-                <h5>Código do País: <span id="data-country-code"></span> </h5>
+                <h5>Código do País: <span id="data-code"></span> </h5>
                 <h5>Total de casos: <span id="data-cases"></span> </h5>
                 <h5>Última Atualização: <span id="data-last-update"></span> </h5>
+                
             </div>
             
         </div> 
@@ -36,19 +38,19 @@
         
         
         
-        <div id="infected" class="panels">
+        <div class="panels">
             <h3>Infectados</h3><br>
-            <h4>#####</h4>
+            <h4 id="infected">#####</h4>
             
         </div>
-        <div id="dead" class="panels">
+        <div  class="panels">
             <h3>Mortos</h3><br>
-            <h4>#####</h4>
+            <h4 id="dead">#####</h4>
             
         </div>
-        <div id="cured" class="panels">
+        <div class="panels">
                         <h3>Curados</h3><br>
-                        <h4>#####</h4>
+                        <h4 id="cured">#####</h4>
                         
                     </div>
                     
