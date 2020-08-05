@@ -18,14 +18,24 @@ async function getCountryList() {
         const x = document.getElementById('country-list')
         const countryListed = []
         //const countrySlug = []
-        data.forEach(element => {
+        /* data.forEach(element => {
             countryListed.push(element.Slug)
         })
-        const countryOrdered = countryListed.sort()
+        const countryOrdered = countryListed.sort() */
 
+        const countryOrdered = data.sort(function(a, b){
+            let nameA=a.Country.toLowerCase();
+            let nameB=b.Country.toLowerCase()
+            if (nameA < nameB) //sort string ascending
+                return -1 
+            if (nameA > nameB)
+                return 1
+            return 0 //default return value (no sorting)
+        })
         countryOrdered.forEach(element => {
             const option = document.createElement('option')
-            option.text = element
+            option.text = element.Country
+            option.value = element.Slug
             x.add(option)           
         });
 
@@ -56,6 +66,11 @@ async function showData() {
     
         const data = res.data
         const latestData = data[data.length - 1]
+        
+        if (!data.Deaths) {
+            alert('não há dados para exibir')
+
+        }
         
 
         const pais = document.getElementById('data-country')
