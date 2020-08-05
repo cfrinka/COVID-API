@@ -4,7 +4,9 @@
     font-family: 'Roboto Mono', monospace;;
 }
 
-
+#slug {
+    display: none;
+}
 
 body {
     background-color: #A7C4D2;

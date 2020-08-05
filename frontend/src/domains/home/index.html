@@ -16,12 +16,12 @@
         <div id="header"> <h3> Dados Atuais COVID-19</h3>
             
         </div>
-        <div id="data-select">
-            Escolha o país 
+        <div id="data-select" onchange="showData()">
+            Escolha o país <p id="slug"></p>
             <select id="country-list">
                 
             </select>
-            <button onclick="showData()">Click</button>
+            
             <div id="data-confirm">
 
                 <h5>Nome do País: <span id="data-country"></span> </h5>

@@ -17,8 +17,9 @@ async function getCountryList() {
         const data = result.data
         const x = document.getElementById('country-list')
         const countryListed = []
+        const countrySlug = []
         data.forEach(element => {
-            countryListed.push(element.Country)
+            countryListed.push(element.Slug)
         })
         const countryOrdered = countryListed.sort()
 
@@ -27,6 +28,17 @@ async function getCountryList() {
             option.text = element
             x.add(option)           
         });
+
+        /* data.forEach(element => {
+            countrySlug.push(element.Slug)
+        })
+        const slugOrdered = countrySlug.sort()
+        const slugHidden = document.getElementById('slug')
+        slugHidden.innerHTML = slugOrdered */
+
+
+        //criar um innerhtml invisivel para usar a variável para chamar na função showData
+        // como tratar retorno vazio??
         
     } catch (error) {
         console.log(error)
@@ -36,8 +48,10 @@ getCountryList()
 
 
 async function showData() {
+    const country = document.getElementById("country-list").value
+
     try{ 
-    const res =  await axios.get('https://api.covid19api.com/country/brazil')
+    const res =  await axios.get(`https://api.covid19api.com/country/${country}`)
     
     
         const data = res.data
@@ -64,6 +78,5 @@ async function showData() {
         console.log('deu ruim', error) 
     }   
 }
-
 
 
