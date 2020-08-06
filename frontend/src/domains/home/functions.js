@@ -16,21 +16,16 @@ async function getCountryList() {
         const result = await axios.get('https://api.covid19api.com/countries')
         const data = result.data
         const x = document.getElementById('country-list')
-        const countryListed = []
-        //const countrySlug = []
-        /* data.forEach(element => {
-            countryListed.push(element.Slug)
-        })
-        const countryOrdered = countryListed.sort() */
+        
 
         const countryOrdered = data.sort(function(a, b){
             let nameA=a.Country.toLowerCase();
             let nameB=b.Country.toLowerCase()
-            if (nameA < nameB) //sort string ascending
+            if (nameA < nameB) 
                 return -1 
             if (nameA > nameB)
                 return 1
-            return 0 //default return value (no sorting)
+            return 0 
         })
         countryOrdered.forEach(element => {
             const option = document.createElement('option')
@@ -39,22 +34,15 @@ async function getCountryList() {
             x.add(option)           
         });
 
-        /* data.forEach(element => {
-            countrySlug.push(element.Slug)
-        })
-        const slugOrdered = countrySlug.sort()
-        const slugHidden = document.getElementById('slug')
-        slugHidden.innerHTML = slugOrdered */
-
-
-        //criar um innerhtml invisivel para usar a variável para chamar na função showData
-        // como tratar retorno vazio??
+        
         
     } catch (error) {
         console.log(error)
     }
 }
 getCountryList()
+
+
 
 
 async function showData() {
@@ -66,12 +54,29 @@ async function showData() {
     
         const data = res.data
         const latestData = data[data.length - 1]
+        console.log(latestData)
         
-        if (!data.Deaths) {
+        /* if (data === [] ) {
+            pais.innerHTML = '--'
+            code.innerHTML = '--'
+            cases.innerHTML = '--'
+            lastUpdate.innerHTML = '--' 
+            infected.innerHTML = '--'
+            dead.innerHTML = '--'
+            cured.innerHTML = '--'
             alert('não há dados para exibir')
 
-        }
+        } */
         
+
+        const dateRecieved = latestData.Date
+        const [year,month,day] = dateRecieved.split('-')
+        const [resolvedDay] = day.split('T')
+        
+
+        const dateFormated = `${resolvedDay}/${month}/${year}`
+
+
 
         const pais = document.getElementById('data-country')
         const code = document.getElementById('data-code')
@@ -84,7 +89,7 @@ async function showData() {
         pais.innerHTML = latestData.Country
         code.innerHTML = latestData.CountryCode
         cases.innerHTML = latestData.Confirmed
-        lastUpdate.innerHTML = latestData.Date
+        lastUpdate.innerHTML = dateFormated
         infected.innerHTML = latestData.Active
         dead.innerHTML = latestData.Deaths
         cured.innerHTML = latestData.Recovered

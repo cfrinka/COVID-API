@@ -81,3 +81,7 @@ body {
 #cured-panel {
     background-color: green;
 }
+
+#country-list {
+    font-size: 18px;
+}
