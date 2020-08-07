@@ -9,7 +9,14 @@
 }
 
 body {
-    background-color: #A7C4D2;
+    background-color: #e6fff9;
+    background-image: url('../../../public/static/images/virus_green_blue.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: contain
+        
+      
 }
 
 #header {
